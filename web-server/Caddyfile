@@ -1,0 +1,12 @@
+{
+    skip_install_trust
+}
+
+https://localhost:8443 {
+    tls localhost.crt localhost.key
+
+    handle_path /static/* {
+        root * static
+        file_server
+    }
+}
